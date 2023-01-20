@@ -11,7 +11,8 @@ public class Bakery {
     private UUID uuid;
     private String name;
     private Address address;
-    private String phoneNumber;
+    private double rating;
+    private Coordinates coordinates;
     private Set<Product> products;
 
     public boolean addProduct(Product product) {

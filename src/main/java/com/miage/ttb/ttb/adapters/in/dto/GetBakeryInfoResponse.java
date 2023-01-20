@@ -7,5 +7,5 @@ import lombok.Data;
 public class GetBakeryInfoResponse {
     private String name;
     private Address address;
-    private String phoneNumber;
+    private double rating;
 }

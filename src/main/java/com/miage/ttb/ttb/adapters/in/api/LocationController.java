@@ -4,6 +4,7 @@ import com.miage.ttb.ttb.adapters.in.dto.GetBakeryInfoResponse;
 import com.miage.ttb.ttb.adapters.in.dto.GetLocationRequest;
 import com.miage.ttb.ttb.application.converter.MapperTool;
 import com.miage.ttb.ttb.application.service.GoogleAPIService;
+import com.miage.ttb.ttb.domain.Bakery;
 import com.miage.ttb.ttb.domain.Coordinates;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
