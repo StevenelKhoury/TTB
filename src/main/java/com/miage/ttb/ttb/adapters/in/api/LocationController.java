@@ -21,11 +21,11 @@ public class LocationController {
 
     @PostMapping(value = "bakery")
     @ResponseStatus(HttpStatus.OK)
-    public List<GetBakeryInfoResponse> getBakeryFromProximity(@RequestBody GetLocationRequest getLocationRequest) {
+    public List<Bakery> getBakeryFromProximity(@RequestBody GetLocationRequest getLocationRequest) {
         return googleAPIService.proximitySearchByWordAndRadius(getLocationRequest.getWord(),
                 getLocationRequest.getRadius(),
                 new Coordinates(getLocationRequest.getX(), getLocationRequest.getY()))
-                .stream().map(mapperTool::bakeryToGetBakeryInfoResponse)
-                .toList();
+                /*.stream().map(mapperTool::bakeryToGetBakeryInfoResponse)
+                .toList()*/;
     }
 }

@@ -15,6 +15,26 @@ public class Bakery {
     private Coordinates coordinates;
     private Set<Product> products;
 
+    //Constructors
+    public Bakery() {
+        this.uuid = UUID.randomUUID();
+    }
+
+    public Bakery(String name, Address address, double rating, Coordinates coordinates) {
+        this();
+        this.name = name;
+        this.address = address;
+        this.rating = rating;
+        this.coordinates = coordinates;
+    }
+
+    public Bakery(String name, Address address, double rating, Coordinates coordinates, Set<Product> products) {
+        this(name, address, rating, coordinates);
+        this.products = products;
+    }
+
+
+
     public boolean addProduct(Product product) {
         return products.add(product);
     }
@@ -24,4 +44,7 @@ public class Bakery {
                 .filter(item -> !item.equals(product))
                 .collect(Collectors.toSet());
     }
+
+
+
 }
