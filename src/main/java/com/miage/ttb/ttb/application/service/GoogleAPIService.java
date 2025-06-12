@@ -21,7 +21,7 @@ public class GoogleAPIService implements GoogleApiPort {
         BakeryAdapterService bakeryAdapterService = BakeryAdapterService.getInstance();
 
         Request request = new Request.Builder()
-                .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+coordinates.x()+"%2C"+coordinates.y()+"&radius="+radius+"&type=bakery&keyword="+word+"&key=AIzaSyCP7fhRbzhXhDlXv5b6EIuUclaEpGEK2ok")
+                .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+coordinates.x()+"%2C"+coordinates.y()+"&radius="+radius+"&type=bakery&keyword="+word+"&key="+API_KEY)
                 .get()
                 .build();
         try {
